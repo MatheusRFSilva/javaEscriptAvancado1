@@ -61,13 +61,12 @@
     <script type="text/javascript" src="js/app/models/Negociacao.js"></script>
     <script type="text/javascript">
       var n1 = new Negociacao(new Date(),10,700);
-      
-      n1._quantidade = 1000000;
 
-      console.log(  n1.quantidade );
-      console.log(  n1.data);
-      console.log(  n1.valor);
-      console.log(n1.volume);
+      console.log(n1.data);
+
+      n1.data.setDate(03);
+
+      console.log(n1.data);
 
 
     </script>
