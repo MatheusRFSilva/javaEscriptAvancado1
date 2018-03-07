@@ -5,13 +5,20 @@ class DateHelper {
   }
 
   static dataParaTexto(data) {
-    return data.getDate()
+    return `${data.getDate()}/${data.getMonth()+1}/${data.getFullYear()}`;
+
+    /*
+    data.getDate()
     +'/'+ (data.getMonth() +1 )+'/'
     +data.getFullYear();
     //console.log(diaMesAno);
+    */
   }
 
   static textoParaData(texto){
+    if (!/\d{4}-\d{2}-\d{2}/.test(texto) ){
+      throw new Error('Deve estar no formato aaaa-mm-dd');
+    }
     return new Date(...texto.split('-').map((item,indice)=> item - indice % 2));
 
     //console.log(data);
