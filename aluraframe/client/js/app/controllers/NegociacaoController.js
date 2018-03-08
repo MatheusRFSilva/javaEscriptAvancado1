@@ -11,13 +11,8 @@ class NegociacaoController {
   adiciona(event){
     event.preventDefault();
 
-    //let helper = new DateHelper();
-
-
-    let negociacao =
-
-
     this._listaNegociacoes.adiciona(this._criaNegociacao());
+    //this._listaNegociacoes.negociacoes.push(this._criaNegociacao());
     this._limpaFormulario();
     console.log(this._listaNegociacoes.negociacoes);
 
